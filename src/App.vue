@@ -9,8 +9,8 @@
             <img src="./assets/logo.png" class="image">
           </router-link>
         </div>
-        <div class="jnav">
-          <ul class="navbar-nav">
+        <div class="jnav fr">
+          <ul class="navbar-nav clearfix">
             <li class="nav-item active">
               <!--<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
               <router-link class="nav-link" :to="'/'">
@@ -18,18 +18,28 @@
               </router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <!--<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+              <router-link class="nav-link" :to="'/solution'">
+                首页
+              </router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
+              <!--<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+              <router-link class="nav-link" :to="'/attitude'">
+                首页
+              </router-link>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown02">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
+            <li class="nav-item">
+              <!--<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+              <router-link class="nav-link" :to="'/news'">
+                新闻中心
+              </router-link>
+            </li>
+            <li class="nav-item">
+              <!--<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+              <router-link class="nav-link" :to="'/development'">
+                首页
+              </router-link>
             </li>
           </ul>
         </div>
@@ -106,5 +116,18 @@
   .view {
     z-index: 1;
     position: relative;
+  }
+
+  .navbar {
+    z-index: 1;
+    position: relative;
+  }
+
+  .fl {
+    float: left;
+  }
+
+  .fr {
+    float: right;
   }
 </style>
