@@ -2,7 +2,7 @@
   <div id="app">
     <!--<img src="./assets/logo.png">-->
     <!--Nav-->
-    <nav class="navbar">
+    <nav class="navbar fixed-top">
       <div class="container navflex">
         <div class="jlogo">
           <router-link class="navbar-brand" :to="'/'">
@@ -89,7 +89,7 @@
     transition: all .5s cubic-bezier(.55, 0, .1, 1);
     width: 100%;
     top: 0;
-    padding: 60px 0 0;
+    padding: 58px 0 0;
     height: 100%;
   }
   
@@ -114,7 +114,8 @@
   
   .navbar {
     z-index: 1;
-    position: relative;
+    /*position: relative;*/
+    background-color: #ffffff;
   }
   
   .fl {
@@ -154,5 +155,26 @@
   .jlogo .navbar-brand .image{
     width: 114px;
     height: 34px;
+  }
+
+  @media (max-width: 767px) {
+    .navflex {
+      flex-direction: column;
+    }
+    .jlogo, .jnav {
+      text-align: center;
+    }
+    .navbar-nav {
+      justify-content: center;
+    }
+  }
+  @media (max-width: 575px) {
+    .jnav {
+      margin: 0 -15px; 
+    }
+    .nav-item {
+      margin: 0 5px;
+      font-size: 14px;
+    }
   }
 </style>

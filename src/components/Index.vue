@@ -1,7 +1,11 @@
 <template>
   <div class="index">
     <div class="page-box pageone-bg">
-      <div class="center-text"></div>
+      <!--<div class="center-text"></div>-->
+      <div class="container text-center">
+        <h1>人 . 组织 . 数据 . 价值</h1>
+        <p>People. Organization. Data. Value</p>
+      </div>
     </div>
     <div class="page-box pageone-about">
       <div class="left-bg"></div>
@@ -106,6 +110,16 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+  }
+
+  .pageone-bg h1 {
+    font-size: 48px;
+    font-weight: 500;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    background-image: url(../assets/newstextbg.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
   }
 
   .pageone-bg > .center-text {
@@ -336,5 +350,27 @@
 
   .pageone-company div:hover.pagecom-16 {
     background-image: url(../assets/company_16_hover.jpg);
+  }
+
+  @media (max-width: 991px) {
+    .pageone-event .col-md-4 p {
+      padding-left: initial;
+    }
+
+    .pageone-event .col-md-4 p i {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .pageone-event .col-md-4 p {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .pageone-bg h1 {
+      font-size: 32px;
+    }
   }
 </style>
