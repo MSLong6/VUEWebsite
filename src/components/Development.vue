@@ -1,14 +1,18 @@
 <template>
-  <div class="nav">
-    首页
+  <div class="development">
+    <page-footer></page-footer>
   </div>
 </template>
 
 <script>
+  import Footer from './Footer';
+
   export default {
     name: 'index',
+    components: {
+      'page-footer': Footer,
+    },
   };
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

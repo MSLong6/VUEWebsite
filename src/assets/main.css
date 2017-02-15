@@ -3,6 +3,7 @@ html, body {
     height: 100%;
     padding: 0;
     margin: 0;
+    color: #626262;
     overflow-x: hidden;
     overflow-y: auto;
     box-sizing: border-box;

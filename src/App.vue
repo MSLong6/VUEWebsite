@@ -3,42 +3,37 @@
     <!--<img src="./assets/logo.png">-->
     <!--Nav-->
     <nav class="navbar">
-      <div class="container clearfix">
-        <div class="jlogo fl">
+      <div class="container navflex">
+        <div class="jlogo">
           <router-link class="navbar-brand" :to="'/'">
-            <img src="./assets/logo.png" class="image">
+            <img src="./assets/logo.svg" onerror="this.onerror=null;this.src='./assets/logo.png'" class="image">
           </router-link>
         </div>
-        <div class="jnav fr">
+        <div class="jnav">
           <ul class="navbar-nav clearfix">
-            <li class="nav-item active">
-              <!--<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+            <li class="nav-item" v-bind:class="navdef==='/'?'active':''">
               <router-link class="nav-link" :to="'/'">
                 首页
               </router-link>
             </li>
-            <li class="nav-item">
-              <!--<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+            <li class="nav-item" v-bind:class="navdef==='/solution'?'active':''">
               <router-link class="nav-link" :to="'/solution'">
-                首页
+                解决方案
               </router-link>
             </li>
-            <li class="nav-item">
-              <!--<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+            <li class="nav-item" v-bind:class="navdef==='/attitude'?'active':''">
               <router-link class="nav-link" :to="'/attitude'">
-                首页
+                聚力态度
               </router-link>
             </li>
-            <li class="nav-item">
-              <!--<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+            <li class="nav-item" v-bind:class="navdef==='/news'?'active':''">
               <router-link class="nav-link" :to="'/news'">
                 新闻中心
               </router-link>
             </li>
-            <li class="nav-item">
-              <!--<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+            <li class="nav-item" v-bind:class="navdef==='/development'?'active':''">
               <router-link class="nav-link" :to="'/development'">
-                首页
+                职业发展
               </router-link>
             </li>
           </ul>
@@ -55,26 +50,25 @@
     </div>-->
   </div>
 </template>
-
 <script>
-  // import Nav from './components/Nav';
   export default {
     name: 'app',
-    // components: {
-    //   'nav': Nav,
-    // },
     data() {
       return {
         transitionName: 'slide-left',
+        navdef: this.$route.path,
       };
     },
-    // watch: {
-    //   '$route'(to, from) {
-    //     const toDepth = to.path.split('/').length;
-    //     const fromDepth = from.path.split('/').length;
-    //     this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left';
-    //   },
-    // },
+    watch: {
+      $route: 'navdefact',
+    },
+    methods: {
+      navdefact() {
+        // 设置router函数跳转
+        this.navdef = this.$route.path;
+        // console.log(this.$route.path);
+      },
+    },
   };
 
 </script>
@@ -117,17 +111,48 @@
     z-index: 1;
     position: relative;
   }
-
+  
   .navbar {
     z-index: 1;
     position: relative;
   }
-
+  
   .fl {
     float: left;
   }
-
+  
   .fr {
     float: right;
+  }
+  
+  .navbar-nav {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  
+  .navflex {
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navbar-nav>.nav-item>a {
+    color: #626262;
+  }
+  
+  .nav-item {
+    margin: 0 20px;
+  }
+
+  li.nav-item.active>a {
+    color: #236fad;
+  }
+
+  .jlogo .navbar-brand .image{
+    width: 114px;
+    height: 34px;
   }
 </style>

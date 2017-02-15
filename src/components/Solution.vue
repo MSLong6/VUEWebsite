@@ -1,16 +1,19 @@
 <template>
-  <div class="nav">
-    首页
+  <div class="solution">
+    <page-footer></page-footer>
   </div>
 </template>
-
 <script>
+  import Footer from './Footer';
+
   export default {
     name: 'index',
+    components: {
+      'page-footer': Footer,
+    },
   };
 
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   h1,
@@ -31,4 +34,5 @@
   a {
     color: #42b983;
   }
+
 </style>

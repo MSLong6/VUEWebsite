@@ -1,12 +1,17 @@
 <template>
-  <div class="nav">
-    首页
+  <div class="attitude">
+    <page-footer></page-footer>
   </div>
 </template>
 
 <script>
+  import Footer from './Footer';
+
   export default {
     name: 'index',
+    components: {
+      'page-footer': Footer,
+    },
   };
 
 </script>
