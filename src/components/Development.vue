@@ -56,7 +56,7 @@
         <div class="join-box">
           <h4><img src="../assets/joinus-email.png" class="mr-3" alt="Email-ico">请发送简历至：<a href="mailto:hr@juli-tech.com">hr@juli-tech.com</a></h4>
           <div class="row">
-            <div class="col-12">邮件标题格式为：应聘 + 职位名称 + 易聘360</div>
+            <div class="col-12">邮件标题格式为：应聘 + 职位名称</div>
           </div>
         </div>
       </div>
