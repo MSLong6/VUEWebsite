@@ -86,6 +86,9 @@
     background-size: cover;
     background-position: center;
   }
+  .page-join h1 {
+    margin: 0;
+  }
   .page-join h1>i {
     color: #2571af;
     margin-right: .5rem;
@@ -107,5 +110,10 @@
   }
   .page-jointext .join-box .row .col-12 {
     line-height: 2rem;
+  }
+  @media (max-width: 575px) {
+    .page-join {
+      padding: 6rem 0;
+    }
   }
 </style>

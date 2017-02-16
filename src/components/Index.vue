@@ -1,7 +1,6 @@
 <template>
   <div class="index">
     <div class="page-box pageone-bg">
-      <!--<div class="center-text"></div>-->
       <div class="container text-center">
         <h1>人 . 组织 . 数据 . 价值</h1>
         <p>People. Organization. Data. Value</p>
@@ -102,10 +101,11 @@
 <style scoped>
   .pageone-bg {
     width: 100%;
-    min-height: 708px;
+    /*min-height: 708px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;*/
+    padding: 22rem 0;
     background-image: url(../assets/pobg.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -369,6 +369,9 @@
   }
 
   @media (max-width: 575px) {
+    .pageone-bg {
+      padding: 12rem 0;
+    }
     .pageone-bg h1 {
       font-size: 32px;
     }

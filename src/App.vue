@@ -169,6 +169,9 @@
     }
   }
   @media (max-width: 575px) {
+    .child-view {
+      padding-top: 93px;
+    }
     .jnav {
       margin: 0 -15px; 
     }

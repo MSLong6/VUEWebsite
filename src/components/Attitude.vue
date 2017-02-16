@@ -42,7 +42,7 @@
   }
   @media (max-width: 575px) {
     .pageattitude {
-      padding: 13rem 0;
+      padding: 8rem 0;
     }
     .pageattitude h1 {
       font-size: 32px;

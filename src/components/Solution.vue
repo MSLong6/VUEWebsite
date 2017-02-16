@@ -211,7 +211,7 @@
 
   @media (max-width: 575px) {
     .solution-center {
-      padding: 7rem 30px;
+      padding: 6rem 30px;
     }
   }
 </style>
