@@ -11,7 +11,7 @@
                 </a>
                 <a href="http://www.yipin360.com" target="_blank" titile="易聘360" class="col-12 col-md-4 ppa yipinlogo">
                 </a>
-                <a href="http://www.zhaoluobo.com" target="_blank" titile="灵动系统" class="col-12 col-md-4 ppa lingdonglogo">
+                <a titile="灵动系统" class="col-12 col-md-4 ppa lingdonglogo">
                 </a>
               </div>
             </div>

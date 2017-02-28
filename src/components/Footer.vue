@@ -33,7 +33,7 @@ export default {
   name: 'footer',
   data() {
     return {
-      icptext: '© 2016 京ICP备15037111号-1',
+      icptext: '© 2017 京ICP备15040914号-3',
     };
   },
 };
