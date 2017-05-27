@@ -11,37 +11,39 @@ import nofound from 'components/nofound';
 Vue.use(Router);
 
 export default new Router({
-  // mode: 'history',
-  routes: [
-    {
-      path: '/',
-      name: 'Index',
-      component: Index,
-    },
-    {
-      path: '/solution',
-      name: 'Solution',
-      component: Solution,
-    },
-    {
-      path: '/attitude',
-      name: 'Attitude',
-      component: Attitude,
-    },
-    {
-      path: '/news',
-      name: 'News',
-      component: News,
-    },
-    {
-      path: '/development',
-      name: 'Development',
-      component: Development,
-    },
-    {
-      path: '*',
-      name: 'nofound',
-      component: nofound,
-    },
+  mode: 'history',
+  scrollBehavior: () => ({
+    y: 0,
+  }),
+  routes: [{
+    path: '/',
+    name: 'Index',
+    component: Index,
+  },
+  {
+    path: '/solution',
+    name: 'Solution',
+    component: Solution,
+  },
+  {
+    path: '/attitude',
+    name: 'Attitude',
+    component: Attitude,
+  },
+  {
+    path: '/news',
+    name: 'News',
+    component: News,
+  },
+  {
+    path: '/development',
+    name: 'Development',
+    component: Development,
+  },
+  {
+    path: '*',
+    name: 'nofound',
+    component: nofound,
+  },
   ],
 });
